@@ -8,24 +8,14 @@
 MB_Queue Serial_Queue(Max_Queue_Size);
 
 
-// ------------------------------ Serial_Manager() ------------------------------
-bool Serial_Manager_Wemos_UP = false;
-bool Serial_Manager_Wemos_Ready = false;
-bool Serial_Manager_Wemos_Settings_Done = false;
-
-
 // ############################## Serial_Manager() ##############################
 void Serial_Manager() {
-
-  // if (Serial_Manager_Wemos_UP == false) return;
 
   if (Serial_Queue.Queue_Is_Empthy == false) {
 
     Serial.println(Serial_Queue.Pop());
     Serial.flush();
   }
- 
-
 
 } // Serial_Manager()
 
